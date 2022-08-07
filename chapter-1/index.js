@@ -1,4 +1,4 @@
-/*
+/**
  * 第 1 章 灵活的语言 —— JavaScript
  */
 
@@ -13,7 +13,7 @@ function checkEmail(a) {
   // 验证邮箱
 }
 
-console.log("checkName: ", checkName);
+console.log(checkName); // [Function: checkName]
 
 /* ***********************************  华丽分隔线  *********************************** */
 
@@ -25,7 +25,7 @@ var CheckObject1 = {
   checkEmail: function () {},
 };
 
-console.log("CheckObject1.checkName: ", CheckObject1.checkName);
+console.log(CheckObject1.checkName); // [Function: checkName]
 
 /**
  * 对象的另一种形式
@@ -36,7 +36,7 @@ CheckObject2.checkName = function () {};
 
 CheckObject2.checkEmail = function () {};
 
-console.log("CheckObject2.checkName: ", CheckObject2.checkName);
+console.log(CheckObject2.checkName); // [Function]
 
 // 以上两种方法，可以简单将函数保存在对象中，但是这个对象不能满足复制
 
@@ -54,7 +54,7 @@ var CheckObject3 = function () {
 // 使用 new 实例化
 var check3 = new CheckObject3();
 
-console.log("check3.checkName: ", check3.checkName);
+console.log(check3.checkName); // [Function]
 
 // 每次实例化，就可以实现复制属性和方法
 // 但是，实例化的对象，都会有一套自己的方法，有时会造成消耗问题
@@ -73,7 +73,7 @@ CheckObject4.prototype.checkEmail = function () {};
 
 var check4 = new CheckObject4();
 
-console.log("check4.checkName: ", check4.checkName);
+console.log(check4.checkName); // [Function]
 
 /**
  * 另一种定义方式
@@ -92,7 +92,7 @@ check5.checkName();
 
 check5.checkEmail();
 
-console.log("check5.checkName: ", check5.checkName);
+console.log(check5.checkName); // [Function: checkName]
 
 // 注意：以上两种方法不能混用，可能会被覆盖
 
@@ -115,10 +115,7 @@ var CheckObject6 = {
 // 链式调用
 CheckObject6.checkName().checkEmail();
 
-console.log(
-  "CheckObject6.checkName().checkEmail: ",
-  CheckObject6.checkName().checkEmail
-);
+console.log(CheckObject6.checkName().checkEmail); // [Function: checkEmail]
 
 /**
  * 也可以放到类的原型对象中
@@ -139,12 +136,12 @@ var check7 = new CheckObject7();
 // 链式调用
 check7.checkName().checkEmail();
 
-console.log("check7.checkName().checkEmail: ", check7.checkName().checkEmail);
+console.log(check7.checkName().checkEmail); // [Function: checkEmail]
 
 /* ***********************************  华丽分隔线  *********************************** */
 
 // 函数的祖先 Function
-console.log("Function: ", Function);
+console.log(Function); // [Function: Function]
 
 /**
  * 扩展 Function
@@ -156,7 +153,7 @@ var f = function () {};
 
 f.checkName();
 
-console.log("f.checkName: ", f.checkName);
+console.log(f.checkName); // [Function]
 
 // 注意：会污染原生 Function，不推荐
 
@@ -179,8 +176,7 @@ methods2.checkName();
 
 methods2.checkEmail();
 
-console.log("methods2.checkName: ", methods2.checkName);
-
+console.log(methods2.checkName); // [Function]
 
 /* ***********************************  小结  *********************************** */
 /**
