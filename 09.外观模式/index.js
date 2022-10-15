@@ -54,7 +54,7 @@ var A = {
   // 绑定事件
   on: function (id, type, fn) {
     document.getElementById(id)['on' + type] = fn;
-  }
+  },
 };
 
 A.css('wrap', 'background', '#f5f5f5');
@@ -62,4 +62,4 @@ A.attr('wrap', 'data-class', 'wrap');
 A.html('wrap', 'Wrap 新内容');
 A.on('wrap', 'click', function () {
   A.css('wrap', 'width', '500px');
-})
+});
