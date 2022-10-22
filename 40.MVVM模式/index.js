@@ -67,3 +67,13 @@
 window.onload = function () {
   VM();
 };
+
+/* ***********************************  小结  *********************************** */
+
+/**
+ * 通过 ViewModel 来获取 View 绑定的属性、数据、事件等，并可以渲染为不同的展示
+ *
+ * View 独立于 Model、ViewModel
+ * Model 也可以独立变化
+ * 一个 ViewModel 可以对应多个 View 或 Model
+ */
