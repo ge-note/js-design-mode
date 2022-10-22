@@ -1,6 +1,8 @@
 /**
- * 第 1 章 灵活的语言 —— JavaScript
+ * 第 1 章 JavaScript
  */
+
+/* ***********************************  华丽分隔线  *********************************** */
 
 /**
  * 谨防定义全局变量
@@ -168,9 +170,9 @@ var methods1 = function () {};
 // 或者
 var methods2 = new Function();
 
-methods2.addMethod("checkName", function () {});
+methods2.addMethod('checkName', function () {});
 
-methods2.addMethod("checkEmail", function () {});
+methods2.addMethod('checkEmail', function () {});
 
 methods2.checkName();
 

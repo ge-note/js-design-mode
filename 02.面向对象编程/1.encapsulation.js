@@ -1,6 +1,8 @@
 /**
- * 封装
+ * 封装（Encapsulation）
  */
+
+/* ***********************************  华丽分隔线  *********************************** */
 
 /**
  * 创建一个类
@@ -28,7 +30,7 @@ Book1.prototype = {
 // 注意：两种方式不要混用
 
 // 实例化对象
-var book1 = new Book1(1, "JavaScript 设计模式", 50);
+var book1 = new Book1(1, 'JavaScript 设计模式', 50);
 
 console.log(book1.name); // JavaScript 设计模式
 
@@ -85,7 +87,7 @@ Book2.isChinese = true;
 
 // 类的静态公有方法（对象不能访问）
 Book2.resetTime = function () {
-  return "New Time";
+  return 'New Time';
 };
 
 Book2.prototype = {
@@ -96,7 +98,7 @@ Book2.prototype = {
 };
 
 // 实例化
-var book2 = new Book2(2, "JavaScript 设计模式", 50);
+var book2 = new Book2(2, 'JavaScript 设计模式', 50);
 
 console.log(book2.num); // undefined
 
@@ -149,7 +151,7 @@ var Book3 = (function () {
     num++;
 
     if (num > 100) {
-      throw new Error("我们仅出版 100 本书");
+      throw new Error('我们仅出版 100 本书');
     }
 
     // 构造器
@@ -169,7 +171,7 @@ var Book3 = (function () {
   return _book;
 })();
 
-var book3 = new Book3(3, "JavaScript 设计模式", 50);
+var book3 = new Book3(3, 'JavaScript 设计模式', 50);
 
 console.log(book3.id); // 3
 
@@ -186,7 +188,7 @@ var Book4 = function (name, price) {
 };
 
 // 没有使用 new
-var book4 = Book4("JavaScript 设计模式", 50);
+var book4 = Book4('JavaScript 设计模式', 50);
 
 console.log(book4); // undefined
 
@@ -196,9 +198,9 @@ console.log(book4); // undefined
 // console.log(window.price) // 50
 
 // node.js 运行环境全局变量 global
-console.log(global.name) // JavaScript 设计模式
+console.log(global.name); // JavaScript 设计模式
 
-console.log(global.price) // 50
+console.log(global.price); // 50
 
 /**
  * 注意：以上实例化对象时，没有 new
@@ -224,7 +226,7 @@ var Book5 = function (name, price) {
 };
 
 // 实例化对象，注意这里没有 new
-var book5 = Book5("JavaScript 设计模式", 50);
+var book5 = Book5('JavaScript 设计模式', 50);
 
 /* ***********************************  小结  *********************************** */
 /**

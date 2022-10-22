@@ -1,8 +1,10 @@
 /**
- * 第 5 章 抽象工厂模式
+ * 第 5 章 抽象工厂模式（Abstract Factory）
  *
  * 通过对类的工厂抽象，使其业务用于对产品类簇的创建，而不负责创建某一类产品的实例
  */
+
+/* ***********************************  华丽分隔线  *********************************** */
 
 /**
  * 抽象类
@@ -11,10 +13,10 @@ var Car = function () {};
 
 Car.prototype = {
   getPrice: function () {
-    return new Error("抽象方法不能调用");
+    return new Error('抽象方法不能调用');
   },
   getSpeed: function () {
-    return new Error("抽象方法不能调用");
+    return new Error('抽象方法不能调用');
   },
 };
 
@@ -36,7 +38,7 @@ Car.prototype = {
  */
 var VehicleFactory = function (subType, superType) {
   // 判断抽象工厂中是否有该抽象类
-  if (typeof VehicleFactory[superType] === "function") {
+  if (typeof VehicleFactory[superType] === 'function') {
     // 缓存类
     function F() {}
 
@@ -50,49 +52,49 @@ var VehicleFactory = function (subType, superType) {
     subType.prototype = new F();
   } else {
     // 不存在该抽象类时抛出错误
-    throw new Error("未创建该抽象类");
+    throw new Error('未创建该抽象类');
   }
 };
 
 // 小汽车抽象类
 VehicleFactory.Car = function () {
-  this.type = "car";
+  this.type = 'car';
 };
 
 VehicleFactory.Car.prototype = {
   getPrice: function () {
-    return new Error("抽象方法不能调用");
+    return new Error('抽象方法不能调用');
   },
   getSpeed: function () {
-    return new Error("抽象方法不能调用");
+    return new Error('抽象方法不能调用');
   },
 };
 
 // 公交车抽象类
 VehicleFactory.Bus = function () {
-  this.type = "bus";
+  this.type = 'bus';
 };
 
 VehicleFactory.Bus.prototype = {
   getPrice: function () {
-    return new Error("抽象方法不能调用");
+    return new Error('抽象方法不能调用');
   },
   getPassengerNum: function () {
-    return new Error("抽象方法不能调用");
+    return new Error('抽象方法不能调用');
   },
 };
 
 // 货车抽象类
 VehicleFactory.Truck = function () {
-  this.type = "truck";
+  this.type = 'truck';
 };
 
 VehicleFactory.Truck.prototype = {
   getPrice: function () {
-    return new Error("抽象方法不能调用");
+    return new Error('抽象方法不能调用');
   },
   getTrainload: function () {
-    return new Error("抽象方法不能调用");
+    return new Error('抽象方法不能调用');
   },
 };
 
@@ -113,7 +115,7 @@ var BMW = function (price, speed) {
 };
 
 // 抽象工厂实现对 Car 抽象类的继承
-VehicleFactory(BMW, "Car");
+VehicleFactory(BMW, 'Car');
 
 BMW.prototype.getPrice = function () {
   return this.price;
@@ -139,7 +141,7 @@ var BenzTruck = function (price, trainLoad) {
 };
 
 // 抽象工厂实现对 Truck 抽象类的继承
-VehicleFactory(BenzTruck, "Truck");
+VehicleFactory(BenzTruck, 'Truck');
 
 BenzTruck.prototype.getPrice = function () {
   return this.price;

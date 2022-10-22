@@ -1,6 +1,8 @@
 /**
- * 继承
+ * 继承（Inherit）
  */
+
+/* ***********************************  华丽分隔线  *********************************** */
 
 /**
  * 类式继承
@@ -72,7 +74,7 @@ console.log(sub1 instanceof Object); // true
  */
 
 function SuperClass2() {
-  this.books = ["JS", "HTML", "CSS"];
+  this.books = ['JS', 'HTML', 'CSS'];
 }
 
 function SubClass2() {}
@@ -85,7 +87,7 @@ var sub22 = new SubClass2();
 
 console.log(sub21.books); // ['JS', 'HTML', 'CSS']
 
-sub22.books.push("设计模式");
+sub22.books.push('设计模式');
 
 console.log(sub21.books); // [ JS', 'HTML', 'CSS', '设计模式']
 
@@ -108,7 +110,7 @@ function SuperClass3(id) {
   this.id = id;
 
   // 引用类型公有属性
-  this.books = ["JS", "HTML", "CSS"];
+  this.books = ['JS', 'HTML', 'CSS'];
 }
 
 // 父类声明原型方法
@@ -130,7 +132,7 @@ console.log(sub31.id); // 31
 
 console.log(sub31.books); // ['JS', 'HTML', 'CSS']
 
-sub32.books.push("设计模式");
+sub32.books.push('设计模式');
 
 console.log(sub32.id); // 32
 
@@ -160,7 +162,7 @@ function SuperClass4(id) {
   this.id = id;
 
   // 引用类型公有属性
-  this.books = ["JS", "HTML", "CSS"];
+  this.books = ['JS', 'HTML', 'CSS'];
 }
 
 // 父类型公有方法
@@ -185,9 +187,9 @@ SubClass4.prototype.getName = function () {
   return this.name;
 };
 
-var sub41 = new SubClass4(41, "JS Book");
+var sub41 = new SubClass4(41, 'JS Book');
 
-sub41.books.push("设计模式");
+sub41.books.push('设计模式');
 
 console.log(sub41.books); // ['JS', 'HTML', 'CSS', '设计模式']
 
@@ -195,7 +197,7 @@ console.log(sub41.getId()); // 41
 
 console.log(sub41.getName()); // JS Book
 
-var sub42 = new SubClass4(42, "HTML Book");
+var sub42 = new SubClass4(42, 'HTML Book');
 
 console.log(sub42.books); // [ JS', 'HTML', 'CSS']
 
@@ -241,8 +243,8 @@ function inheritObject(o) {
  */
 // 声明基对象
 var book6 = {
-  name: "JS Book",
-  books: ["JavaScript 设计模式"],
+  name: 'JS Book',
+  books: ['JavaScript 设计模式'],
 };
 function createBook(obj) {
   // 通过原型继承方式创建新对象
@@ -287,7 +289,7 @@ function SuperClass5(id) {
   this.id = id;
 
   // 引用类型公有属性
-  this.books = ["JS", "HTML", "CSS"];
+  this.books = ['JS', 'HTML', 'CSS'];
 }
 
 // 父类型公有方法
@@ -313,11 +315,11 @@ SubClass5.prototype.getName = function () {
   return this.name;
 };
 
-var sub51 = new SubClass5(51, "JS");
+var sub51 = new SubClass5(51, 'JS');
 
-var sub52 = new SubClass5(52, "HTML");
+var sub52 = new SubClass5(52, 'HTML');
 
-sub51.books.push("设计模式");
+sub51.books.push('设计模式');
 
 console.log(sub51.books); // ['JS', 'HTML', 'CSS', '设计模式']
 
@@ -374,10 +376,10 @@ console.log(
   assign(
     {},
     {
-      name: "JavaScript 设计模式",
+      name: 'JavaScript 设计模式',
     },
     {
-      type: "JS Book",
+      type: 'JS Book',
     }
   )
 );

@@ -1,8 +1,10 @@
 /**
- * 第 4 章 工厂方法模式
+ * 第 4 章 工厂方法模式（Factory Method）
  *
  * 通过对产品类的抽象，使其创建业务主要负责用于创建 “多类” 产品的实例
  */
+
+/* ***********************************  华丽分隔线  *********************************** */
 
 /**
  * 安全模式类
@@ -17,7 +19,7 @@ var Demo1 = function () {};
 
 Demo1.prototype = {
   show: function () {
-    return "显示";
+    return '显示';
   },
 };
 
@@ -42,7 +44,7 @@ var Demo2 = function () {
 
 Demo2.prototype = {
   show: function () {
-    return "显示";
+    return '显示';
   },
 };
 
@@ -73,20 +75,20 @@ Factory.prototype = {
 
 var list = [
   {
-    type: "Java",
-    content: "Java Content",
+    type: 'Java',
+    content: 'Java Content',
   },
   {
-    type: "JavaScript",
-    content: "Java Content",
+    type: 'JavaScript',
+    content: 'Java Content',
   },
   {
-    type: "PHP",
-    content: "Java Content",
+    type: 'PHP',
+    content: 'Java Content',
   },
   {
-    type: "UI",
-    content: "Java Content",
+    type: 'UI',
+    content: 'Java Content',
   },
 ];
 
