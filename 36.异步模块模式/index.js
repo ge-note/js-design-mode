@@ -14,19 +14,19 @@
    * @param {string} deps 依赖模块
    * @param {function} callback 模块主函数
    */
-  F.module = function (url, deps, callback) {
-    // // 将参数转为数组
-    // var args = [].slice.call(arguments);
+  F.module = function () {
+    // 将参数转为数组
+    var args = [].slice.call(arguments);
 
-    // // 获取模块构造函数（参数数组中最后一个参数）
-    // var callback = args.pop();
+    // 获取模块构造函数（参数数组中最后一个参数）
+    var callback = args.pop();
 
-    // // 获取依赖模块
-    // var deps =
-    //   args.length && args[args.length - 1] instanceof Array ? args.pop() : [];
+    // 获取依赖模块
+    var deps =
+      args.length && args[args.length - 1] instanceof Array ? args.pop() : [];
 
-    // // 该模块 url（模块 ID）
-    // var url = args.length ? args.pop() : null;
+    // 该模块 url（模块 ID）
+    var url = args.length ? args.pop() : null;
 
     // 依赖模块序列
     var params = [];
